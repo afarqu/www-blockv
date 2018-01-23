@@ -1,0 +1,47 @@
+body,
+html {
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+
+  &:after {
+    position: fixed;
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: -10;
+    background: url(../img/method-draw-image.svg) center center repeat;
+    background-attachment: fixed;
+    opacity: .25;
+    background-size: 200px;
+  }
+
+  &.not-found-page {
+    &:after {
+      background-size: cover;
+      background-position: center;
+
+      @include media-breakpoint-up(sm) {
+        background-image: url(../img/bg-gif-404.gif);
+      }
+
+      @include media-breakpoint-down(xs) {
+        background-image: url(../img/bg-gif-4042.gif);
+      }
+    }
+  }
+}
+.wow {
+  visibility: hidden;
+}
+
+@import "settings";
+@import "packages/bootstrap";
+@import "common/common";
+@import "partials/partials";
+@import "componets/components";

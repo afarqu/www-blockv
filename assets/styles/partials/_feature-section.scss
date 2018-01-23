@@ -1,0 +1,404 @@
+.feature-section {
+  @include media-breakpoint-up(lg) {
+    padding-top: 120px;
+    padding-bottom: 60px;
+  }
+
+  @include media-breakpoint-only(md) {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+
+  @include media-breakpoint-only(sm) {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
+
+
+  .section-title {
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 100px;
+    }
+
+    @include media-breakpoint-only(md) {
+      margin-bottom: 80px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 50px;
+    }
+  }
+
+  .content-wrap {
+    @include media-breakpoint-down(xs) {
+      margin: 0 auto;
+    }
+  }
+
+  &.unified {
+    .section-title {
+      margin-bottom: 40px;
+
+      .featured {
+        position: relative;
+
+        .decoration {
+          @include decoration;
+          background: url("../img/triangle-left-gold.svg") no-repeat right top;
+          width: 1000px;
+          height: 1000px;
+
+          @include media-breakpoint-up(lg) {
+            background-size: 600px;
+          }
+
+          @include media-breakpoint-only(md) {
+            background-size: 510px;
+          }
+
+          @include media-breakpoint-only(sm) {
+            background-size: 400px;
+          }
+
+          @include media-breakpoint-down(xs) {
+            background-size: 340px;
+          }
+        }
+      }
+    }
+
+    .app-preview-wrap {
+      .decoration {
+        @include decoration;
+        background: url("../img/triangle-right-blue.svg") no-repeat right top;
+        width: 600px;
+        height: 1000px;
+        right: auto;
+        left: 0;
+        top: 70%;
+
+        @include media-breakpoint-up(lg) {
+          background-size: 600px;
+        }
+
+        @include media-breakpoint-only(md) {
+          background-size: 510px;
+        }
+
+        @include media-breakpoint-only(sm) {
+          background-size: 500px;
+          left: -100px;
+        }
+
+        @include media-breakpoint-down(xs) {
+          background-size: 510px;
+          left: -100px;
+        }
+      }
+    }
+  }
+
+  &.try {
+    .section-title {
+      .featured {
+        position: relative;
+
+        .decoration {
+          @include decoration;
+          background: url("../img/triangle-left-gold.svg") no-repeat right top;
+          width: 1000px;
+          height: 1000px;
+
+          @include media-breakpoint-up(lg) {
+            background-size: 450px;
+            right: -20px;
+          }
+
+          @include media-breakpoint-only(md) {
+            background-size: 380px;
+            right: -10px;
+          }
+
+          @include media-breakpoint-only(sm) {
+            background-size: 260px;
+            right: -10px;
+          }
+
+          @include media-breakpoint-down(xs) {
+            background-size: 260px;
+            right: -10px;
+          }
+        }
+      }
+    }
+
+    .app-preview-wrap {
+      .decoration {
+        @include decoration;
+        background: url("../img/triangle-right-black.svg") no-repeat right top;
+        width: 600px;
+        height: 1000px;
+        right: auto;
+        left: 0;
+        top: 60%;
+
+        @include media-breakpoint-up(lg) {
+          background-size: 600px;
+        }
+
+        @include media-breakpoint-only(md) {
+          background-size: 510px;
+        }
+
+        @include media-breakpoint-only(sm) {
+          background-size: 510px;
+        }
+
+        @include media-breakpoint-down(xs) {
+          background-size: 580px;
+        }
+      }
+    }
+  }
+
+  &.token-section {
+    .image-wrap {
+      position: relative;
+
+      .decoration {
+        @include decoration;
+        background: url("../img/triangle-left-blue.svg") no-repeat right top;
+        width: 1000px;
+        height: 1000px;
+        right: 0;
+        left: auto;
+        top: 70%;
+
+        @include media-breakpoint-up(md) {
+          background-size: 900px;
+        }
+      }
+    }
+  }
+
+  .slider-wrap {
+    overflow: hidden;
+    max-height: 100%;
+  }
+
+  .points-list {
+    list-style: none;
+    padding-left: 0;
+
+    li {
+      position: relative;
+      font-size: 18px;
+      line-height: 1.5;
+      font-weight: 400;
+      color: $black;
+      margin-bottom: 15px;
+      padding-left: 25px;
+
+      @include media-breakpoint-down(xs) {
+        font-size: 16px;
+      }
+
+      &:after {
+        position: absolute;
+        content: '';
+        left: 0;
+        top: .6em;
+        transform: translateY(-50%);
+        background-color: transparentize($black, .75);
+        width: 9px;
+        height: 9px;
+      }
+    }
+  }
+
+  &.token-section {
+    .section-title {
+      margin-bottom: 30px;
+    }
+
+    .points-list {
+      @include media-breakpoint-up(lg) {
+        padding-top: 10px;
+      }
+    }
+
+    .image-wrap {
+      img {
+        width: 100%;
+      }
+
+      @include media-breakpoint-down(xs) {
+        width: 200px;
+        margin: 0 auto 40px;
+      }
+    }
+  }
+
+  .app-preview-wrap {
+    position: relative;
+    margin: 0 auto;
+
+    @include media-breakpoint-up(md) {
+      width: 400px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      width: 280px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      width: 260px;
+    }
+
+    .slider-wrap {
+      position: absolute;
+
+      @include media-breakpoint-up(md) {
+        width: 269px;
+        top: 73px;
+        left: 72px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        width: 182px;
+        top: 58px;
+        left: 54px;
+      }
+
+      @include media-breakpoint-down(xs) {
+        width: 170px;
+        top: 54px;
+        left: 49px;
+      }
+    }
+
+    .slick-dots {
+      @include media-breakpoint-up(md) {
+        bottom: -110px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        bottom: -90px;
+      }
+    }
+  }
+
+  .mobile-instruction {
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+    color: #000;
+
+    @include media-breakpoint-up(sm) {
+      display: none;
+    }
+  }
+
+  .present-image-wrap {
+    position: relative;
+    text-align: center;
+
+    @include media-breakpoint-up(lg) {
+      width: 280px;
+      height: 280px;
+      left: -40px;
+    }
+
+    @include media-breakpoint-only(md) {
+      width: 240px;
+      height: 240px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 30px;
+      width: 200px;
+      height: 200px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      width: 100px;
+      height: 100px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &.animated {
+      img {
+        animation: pulse-ring 2s ease-in-out infinite;
+      }
+    }
+
+    img {
+      position: absolute;
+      z-index: 2;
+      width: 280px;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+      transition: all 2s ease-in-out;
+
+      @include media-breakpoint-down(xs) {
+        width: 200px;
+      }
+    }
+  }
+
+  .gift-button-wrap {
+    margin-bottom: 20px;
+
+    .btn {
+      width: 250px;
+    }
+  }
+
+  .steps-list {
+    @include media-breakpoint-down(xs) {
+      min-height: 50px;
+      margin-bottom: 0;
+    }
+
+    li {
+      @include media-breakpoint-down(xs) {
+        display: none;
+      }
+    }
+
+    .active {
+      font-weight: 500;
+      display: block;
+    }
+  }
+
+  .gift-progress {
+    width: 250px;
+    margin-bottom: 30px;
+    opacity: 0;
+
+    .progress-bar {
+      background-color: $blue;
+      height: 25px;
+    }
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.05);
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+  }
+}
