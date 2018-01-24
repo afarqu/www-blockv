@@ -5,10 +5,10 @@ files:
     destination: /srv/blockv.io
 hooks:
   ApplicationStart:
-    - location: /etc/init.d/nginx start
+    - location: service nginx start
       timeout: 300
       runas: root
   ApplicationStop:
-    - location: /etc/init.d/nginx stop
+    - location: service nginx stop
       timeout: 300
       runas: root
