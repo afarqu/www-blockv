@@ -7,13 +7,13 @@ files:
     destination: /etc/nginx
 hooks:
   ApplicationStart:
-    - location: scripts/start_server.sh
+    - location: www/scripts/start_server.sh
       timeout: 300
       runas: root
   ApplicationStop:
-    - location: scripts/stop_server.sh
+    - location: www/scripts/stop_server.sh
       timeout: 300
       runas: root
   AfterInstall:
-    - location: scripts/clear_cache.sh
+    - location: www/scripts/clear_cache.sh
       timeout: 380
